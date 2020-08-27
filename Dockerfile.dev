@@ -1,0 +1,13 @@
+FROM svgitlab.spatialvision.com.au:4567/vancouver/wras-api:base
+
+WORKDIR /usr/app
+
+RUN npm install -g supervisor mocha
+
+COPY package.json .
+RUN npm install --quiet
+
+# expose proxy port
+EXPOSE 3000
+CMD [ "npm", "start" ]
+
