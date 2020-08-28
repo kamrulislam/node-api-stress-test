@@ -11,7 +11,8 @@ async function run (patient: any) {
 const addPatient = asyncHandler(async (req: Request, res: Response) => {
   const patient = req.body;
   patient.id = v4();
-  res.json(await run(patient));
+  await run(patient);
+  res.json(patient);
 });
 
 export {
