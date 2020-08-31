@@ -16,7 +16,7 @@ async function run (patient: any) {
     $set: patient,
   };
 
-  return await collection.updateOne(filter, updateDoc, options);
+  return await collection.replaceOne(filter, patient, options);
 }
 
 const updatePatient = asyncHandler(async (req: Request, res: Response) => {

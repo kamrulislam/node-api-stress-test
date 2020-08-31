@@ -9,4 +9,4 @@ index.get('/patients', findAllPatients);
 index.get('/patients/:id', findPatientById);
 index.delete('/patients/:id', deletePatient);
 index.put('/patients/:id', updatePatient);
-index.post('/patients/new', addPatient);
+index.post('/patients', addPatient);

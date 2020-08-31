@@ -3,7 +3,7 @@ import {MongoClient} from 'mongodb';
 class MongoDbHelper {
   private static db: any;
   // Connection URI
-  private static uri = 'mongodb://root:password@192.168.1.8:27017/?poolSize=20&w=majority';
+  private static uri = 'mongodb://127.0.0.1:27017/?poolSize=20&w=majority';
   private static DATABASE = 'MyDoktor';
   private static COLLECTION = 'Patients';
 
